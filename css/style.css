@@ -1,0 +1,150 @@
+body {
+  width: 960px;
+  margin: 0 auto;
+  border: solid 1px black;
+}
+
+.header {
+  font-family: 'Lobster';font-size: 22px;
+  overflow: hidden;
+  border: solid 1px black;
+}
+
+/* Style the links inside the navigation bar */
+.header li {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+#choc-pizza {
+  font-size: 1em;
+  color: #fff;
+  background-color: #000;
+  padding: 3px 6px;
+  border: solid 1px black;
+}
+
+/* hr {
+  display: block;
+  border: 0;
+  border-top: 9px solid #ccc;
+  margin: 1em 0;
+  padding: 0; 
+} */
+
+hr { 
+  background: url('img/small-logo.png') no-repeat top center;
+  background-size: contain;
+  display: block;
+  height: 18px;
+  border: 0;
+  position: relative;
+}
+hr:before,
+hr:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: #555555;
+  height: 2px;
+  top: 8px;
+}
+hr:before {
+  left: 0;
+  right: 50%;
+  margin-right: 10px;
+}
+hr:after {
+  right: 0;
+  left: 50%;
+  margin-left: 10px;
+}
+
+.recipe {
+  font-size: 1em;
+  display: block;
+  position: relative;
+  border: solid 1px black;
+}
+
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+}
+
+.checkbox label {
+  position: relative;
+  display: inline-block;
+  
+  /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+  padding-left: 22px;
+}
+
+.checkbox label::before,
+.checkbox label::after {
+  position: absolute;
+  content: "";
+  
+  /*Needed for the line-height to take effect*/
+  display: inline-block;
+}
+
+/*Outer box of the fake checkbox*/
+.checkbox label::before{
+  height: 8px;
+  width: 8px;
+  
+  border: 1px solid;
+  left: 0px;
+  
+  /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
+   *to vertically center it.
+   */
+  top: 7px;
+}
+
+/*Checkmark of the fake checkbox*/
+.checkbox label::after {
+  height: 3px;
+  width: 7px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  
+  transform: rotate(-45deg);
+  
+  left: 2px;
+  top: 8px;
+}
+
+/*Hide the checkmark by default*/
+.checkbox input[type="checkbox"] + label::after {
+  content: none;
+}
+
+/*Unhide on the checked state*/
+.checkbox input[type="checkbox"]:checked + label::after {
+  content: "";
+}
+
+#share-recipe {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+  border: solid 1px black;
+}
+
+article {
+  font-size: 1.14em;
+  border: solid 1px black;
+  text-indent: 25px;
+}
+
+#bottom {
+  font-size: 0.8em;
+  display: block;
+  text-align: center;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
